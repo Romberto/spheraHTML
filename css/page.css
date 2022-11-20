@@ -1,0 +1,208 @@
+:root{
+    --menu_height: 100px;
+    --white: #fff;
+    --red:#ed7708;
+    --dark_white: rgb(238, 226, 226);
+    --green:rgb(11, 158, 6);
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url(/fonts/Pacifico/Pacifico-Regular.ttf);
+    src: url(/fonts/Pacifico/Pacifico-Regular.woff) format('woff'),
+    url(/fonts/Pacifico/Pacifico-Regular.woff2) format('woff2');
+  }
+
+@font-face {
+    font-family: 'MiniSpirit02';
+    src: url(/fonts/MiniSpirit02_regular/MintSpiritNo2-Regular.ttf);
+    src: url(/fonts/MiniSpirit02_regular/MintSpiritNo2-Regular.woff) format('woff'),
+    url(/fonts/MiniSpirit02_regular/MintSpiritNo2-Regular.woff2) format('woff2');
+  }
+
+@font-face {
+    font-family: 'MiniSpirit02_italic';
+    src: url(/fonts/MiniSpirit02_italic/MintSpiritNo2-Italic.ttf);
+    src: url(/fonts/MiniSpirit02_italic/MintSpiritNo2-Italic.woff) format('woff'),
+    url(/fonts/MiniSpirit02_italic/MintSpiritNo2-Italic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'MiniSpirit02_bold';
+    src: url(/fonts/MiniSpiritBold02/MintSpiritNo2-Bold.ttf);
+    src: url(/fonts/MiniSpiritBold02/MintSpiritNo2-Bold.woff) format('woff'),
+    url(/fonts/MiniSpiritBold02/MintSpiritNo2-Bold.woff2) format('woff2');
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__logo_link{
+    width: 20%;
+    
+}
+
+.header__menu_link{
+    font: 30px 'MiniSpirit02', sans-serif;
+}
+.header__menu_link:hover{
+    border-bottom: 5px solid #131313;
+}
+
+.header__logo_img{
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+
+}
+.header__menu_list{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main{
+    position: relative;
+    padding: 20px 5px 5px;
+}
+
+.main__description{
+    font: 30px 'MiniSpirit02', sans-serif;
+    color: var(--green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.phone__form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid var(--green);
+    border-radius: 5px;
+}
+.phone__form label{
+    margin-bottom: 20px;
+    font: 30px 'MiniSpirit02', sans-serif;
+    text-align: center;
+}
+
+.input__main{
+    margin-bottom: 20px;
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+.input_btn{
+    background-color: var(--red);
+    font-weight: 900;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+
+}
+#form__phone_ok{
+    display: none;
+}
+
+.viget__form{
+    width: 400px;
+    height: 310px;
+    background-color: var(--dark_white);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+.viget__header{
+    margin-left: 75px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.viget__header::after,
+.viget__header::before{
+    content: '';
+    position: absolute;
+    
+    left: -30px;
+    width: 15px;
+    height: 2px;
+    background-color: darkgrey;
+}
+
+.viget__header::after{
+    transform: rotate(45deg);
+    top: 27px;
+}
+
+.viget__header::before{
+    transform: rotate(-45deg);
+    top: 17px;
+}
+
+.viget_header__description{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.viget_line{
+    width: 100%;
+    height: 2px;
+    background-color: darkgrey;
+    margin-bottom: 35px;
+}
+
+.viget_line + p{
+    margin-bottom: 10px;
+}
+.input__viget{
+    margin-bottom: 35px;
+}
+
+.veget__cart_block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.viget__cart_cvc,
+.viget__cart_my{
+    display: flex;
+    flex-direction: column;
+    
+}
+.viget__cart_my{
+    width: 150px;
+}
+.viget__cart_cvc{
+    width: 70px;
+}
+.cart__month{
+    width: 60px;
+}
+
+.viget__btn{
+    width: 100%;
+    background-color: yellow;
+}
+
+

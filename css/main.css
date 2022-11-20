@@ -1,0 +1,306 @@
+
+
+
+:root{
+    --menu_height: 100px;
+    --white: #fff;
+    --red:#ed7708;
+    --dark_white: rgb(163, 159, 159);
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url(/fonts/Pacifico/Pacifico-Regular.ttf);
+    src: url(/fonts/Pacifico/Pacifico-Regular.woff) format('woff'),
+    url(/fonts/Pacifico/Pacifico-Regular.woff2) format('woff2');
+  }
+
+@font-face {
+    font-family: 'MiniSpirit02';
+    src: url(/fonts/MiniSpirit02_regular/MintSpiritNo2-Regular.ttf);
+    src: url(/fonts/MiniSpirit02_regular/MintSpiritNo2-Regular.woff) format('woff'),
+    url(/fonts/MiniSpirit02_regular/MintSpiritNo2-Regular.woff2) format('woff2');
+  }
+
+@font-face {
+    font-family: 'MiniSpirit02_italic';
+    src: url(/fonts/MiniSpirit02_italic/MintSpiritNo2-Italic.ttf);
+    src: url(/fonts/MiniSpirit02_italic/MintSpiritNo2-Italic.woff) format('woff'),
+    url(/fonts/MiniSpirit02_italic/MintSpiritNo2-Italic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'MiniSpirit02_bold';
+    src: url(/fonts/MiniSpiritBold02/MintSpiritNo2-Bold.ttf);
+    src: url(/fonts/MiniSpiritBold02/MintSpiritNo2-Bold.woff) format('woff'),
+    url(/fonts/MiniSpiritBold02/MintSpiritNo2-Bold.woff2) format('woff2');
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.menu__btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transform: translateY(-300px);
+    animation-name: menu;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu{
+    100%{
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.menu__btn_wraper{
+    position: relative;
+    height: 100%;
+
+}
+.menu__btn_burger{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.menu__btn_burger::after,
+.menu__btn_burger::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+    right: 0;
+}
+
+.menu__btn_burger::after{
+    top:25px;
+
+}
+.menu__btn_burger::before{
+    bottom: -50px;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+}
+.menu__wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    opacity: 0.9;
+}
+
+.menu__inner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 5px 5px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.menu__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu__item{
+    margin-bottom: 25px;
+}
+
+.menu__logo{
+    width: 60px;
+    margin-bottom: 60px;
+}
+.menu__link{
+    font:35px 'MiniSpirit02_italic',sans-serif; 
+}
+.menu__link:hover{
+    color: var(--red);
+}
+
+.info__addres,
+.info__phone,
+.info__mail{
+    font:20px 'MiniSpirit02_italic', sans-serif;
+}
+
+
+
+
+.excursions__main{
+    background: url(/photo_download/cirius1.jpg);
+    max-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.excursions{
+    position: relative;
+}
+
+.excursions__pay-text{
+    position: absolute;
+    top: -400px;
+    left: 20px;
+    width: 340px;
+    
+}
+
+
+.excursions__pay-description{
+    color: var(--white);   
+    text-align: start;
+    margin-bottom: 10px;
+    font: 35px 'Pacifico', sans-serif;
+}
+
+.excursions__pay-btn{
+    position: relative;
+    width: 150px;
+    height: 60px;
+    display: block;
+    margin-left: 30px;
+
+}
+
+.excursions__pay-row{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100px;
+    left: 15px;
+    background-color: var(--red);
+}
+
+.excursions__pay-row::after,
+.excursions__pay-row::before{
+    position: absolute;
+    content: "";
+    background: var(--red);
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+
+
+}
+
+.excursions__pay-row::after{
+    transform:  rotate(35deg);
+    left: 64px;
+    top: -11px;
+
+}
+
+.excursions__pay-row::before{
+    transform:  rotate(-35deg);
+    left: 64px;
+    top: 11px;
+}
+
+.djeeping__main{
+    background: url('/photo/main/djeeping.webp');
+    max-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.djeeping__pay-text{
+    position: absolute;
+    top:65px;
+    right: 65px;
+    width: 340px;
+    display: none;
+}
+
+.excursions__pay-djeeping{
+    color: var(--red);
+    text-align: end;
+    margin-bottom: 10px;
+    font: 38px 'Pacifico', sans-serif;
+}
+
+.margin-left{
+    margin-left: 175px;
+}
+
+.ritail__main{
+    background: url('/photo/main/kv.webp');
+    max-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ritail__pay-text{
+    position: absolute;
+    top: 100px;
+    left: 65px;
+    width: 340px;
+    display: none;
+}
+.scrollRow__link_down{
+    width: 150px;
+    height: 140px;
+    background-image: url('/photo/main/arrowheaddown_110942.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.scrollRow__link__up{
+    width: 150px;
+    height: 140px;
+    background-image: url('/photo/main/arrowheaddown_110942.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform:translateX(-50%) rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
